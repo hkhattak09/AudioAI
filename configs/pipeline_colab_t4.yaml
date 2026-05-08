@@ -1,0 +1,22 @@
+stt:
+  type: wav2vec2
+  config: configs/stt_wav2vec2_tiny.yaml
+
+llm:
+  type: colab_ai
+
+tts:
+  type: tacotron2
+  config: configs/tts_tacotron2_tiny.yaml
+
+vocoder:
+  type: hifigan
+  config: configs/vocoder_hifigan_tiny.yaml
+
+device: cuda
+sample_rate: 22050
+stt_sample_rate: 16000
+tts_sample_rate: 22050
+batch_size: 8
+mixed_precision: true
+checkpoint_dir: /content/drive/MyDrive/voice_ai/checkpoints

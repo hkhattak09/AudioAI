@@ -1,0 +1,18 @@
+stt:
+  type: fake
+  config: configs/stt_wav2vec2_tiny.yaml
+
+llm:
+  type: local_stub
+
+tts:
+  type: fake
+  n_mels: 16
+  n_frames: 20
+
+vocoder:
+  type: fake
+  output_samples: 1000
+
+device: cpu
+sample_rate: 22050

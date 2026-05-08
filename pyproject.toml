@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voice-ai"
+version = "0.1.0"
+description = "Local voice AI pipeline scaffold for PyTorch"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "torch",
+    "torchaudio",
+    "numpy",
+    "scipy",
+    "librosa",
+    "soundfile",
+    "pyyaml",
+    "tqdm",
+    "transformers",
+    "datasets",
+    "accelerate",
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: tests that are too slow or memory-heavy for the local MacBook",
+    "gpu: tests that require CUDA or substantial GPU memory",
+    "download: tests that download models, datasets, or checkpoints",
+]
