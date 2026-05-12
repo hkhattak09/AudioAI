@@ -2,8 +2,6 @@
 
 This file records the successful Colab run for the speech alignment and codec tokenization pipeline.
 
-## Project Claim Covered
-
 Speech Alignment and Tokenization Pipeline for TTS
 
 - Built a preprocessing pipeline that converts raw audio-transcript pairs into word-aligned speech segments using Wav2Vec2 CTC emissions and forced alignment.
